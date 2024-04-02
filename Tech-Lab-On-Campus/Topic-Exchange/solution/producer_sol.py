@@ -35,7 +35,7 @@ class mqProducer():
         #publish
         self.channel.basic_publish(
             exchange=self.exchange,
-            routing_key=sys.argv[2],
+            routing_key=self.routing_key,
             body=message
         )
         
